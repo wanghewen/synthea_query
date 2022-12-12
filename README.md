@@ -6,7 +6,7 @@
 
 1. Put the SQL files into the code folder.
 
-2. Generate synthetic data in CSV format:
+2. Import the generated synthetic data into the database:
 
 ```bash
 psql -U your_super_user_name -f dump-synthea-202212120538.sql
@@ -26,13 +26,13 @@ java -jar .\synthea-with-dependencies.jar -s 12 -p 100 --exporter.csv.export tru
 psql -U your_super_user_name -d synthea -f create_user.sql
 ```
 
-4. Create a query:
+4. Create a query using table joins and where clause:
 
 ```bash
 psql -U your_super_user_name -d synthea -f create_query.sql
 ```
 
-Inside the SQL files there are explanations for each query.
+Inside the SQL files there are explanations and optimizations of the query.
 
 # Task 2
 
@@ -42,7 +42,7 @@ Inside the SQL files there are explanations for each query.
 pip install -r requirements.txt
 ```
 
-2. Setup environment variables, for example:
+2. Setup environment variables for PostgreSQL, for example:
 
 ```bash
 export synthea_user=test synthea_password=test synthea_host=localhost synthea_port=5432 synthea_database=synthea
