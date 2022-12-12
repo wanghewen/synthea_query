@@ -1,3 +1,5 @@
+[![Build and Test](https://github.com/wanghewen/synthea_query/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/wanghewen/synthea_query/actions/workflows/build-and-test.yml)
+
 # Requirement:
 
 1. PostgreSQL are installed somewhere.
